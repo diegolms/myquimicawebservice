@@ -11,8 +11,7 @@
 			<div id="nav-right">
 
 				<div class="nav">
-					<div class="table">
-						<div class="nav-divider"></div>
+					<div class="nav-divider"></div>
 						<ul class="select">
 							<a href="minha_conta.jsp"><b>Minha Conta</b></a>
 						</ul>
@@ -24,8 +23,7 @@
 							
 						</ul>
 				
-					</div>
-					
+				
 				</div>
 
 				<!--  end account-content -->

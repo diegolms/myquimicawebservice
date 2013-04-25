@@ -5,27 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>MyQuímica</title>
-<style type="text/css">
-.back {
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-</style>
 <link type="text/css" rel="stylesheet" href="login/login-box.css" />
 
 </head>
 <body>	
-
-   <br><br><br><br>    
-   
+<img src="login/images/background.png" width="100%" height="100%" id="bg">    	
+     
 	<div align="center" >
-	<a href="http://code.google.com/p/myquimica/"><img src="login/images/tituloMyquimica.png" width="471"
-		height="90" style="mmargin-left: 0px;" /></a>
+	<a href="http://code.google.com/p/myquimica/"><img src="login/images/tituloMyquimica.png" width="471" height="90" style="mmargin-left: 0px;" /></a>
 	</div>
-	<p><img src="login/images/background.png" class="back"/></p>
+	
 	<div style="padding: 0px 0 0 0px;" align="center">
 		<div id="login-box">
 

@@ -53,19 +53,19 @@ public class LoginServlet extends HttpServlet {
 				
 		if(request.getParameter("acao").equals("login")) {
 			//openshift
-//			String login = request.getParameter("login");
-//			String senha = request.getParameter("senha");
-//			Usuario usuario = this.buscarUsuario(login);
-//			if(usuario != null){
-//				if(usuario.getLogin().equals(login) && (usuario.getSenha().equals(senha))){
-//					HttpSession sessao = request.getSession();
-//					sessao.setAttribute("login", request.getParameter("login"));
-//					pagina = "principal.jsp";
-//				}
-//			}
-			HttpSession sessao = request.getSession();
-			sessao.setAttribute("login", request.getParameter("login"));
-			pagina = "principal.jsp";
+			String login = request.getParameter("login");
+			String senha = request.getParameter("senha");
+			Usuario usuario = this.buscarUsuario(login);
+			if(usuario != null){
+				if(usuario.getLogin().equals(login) && (usuario.getSenha().equals(senha))){
+					HttpSession sessao = request.getSession();
+					sessao.setAttribute("login", request.getParameter("login"));
+					pagina = "principal.jsp";
+				}
+			}
+//			HttpSession sessao = request.getSession();
+//			sessao.setAttribute("login", request.getParameter("login"));
+//			pagina = "principal.jsp";
 			
 			
 		} else if(request.getParameter("acao").equals("logout")) {
