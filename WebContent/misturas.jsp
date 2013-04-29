@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@ page language="java" import="java.sql.*"%>
-<%@ page language="java" import="br.com.myquimica.database.ConexaoBD"%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -48,13 +47,16 @@
 				<h1>Misturas</h1>
 			</div>
 
+
 			<!--  start top-search -->
 			<div id="top-search">
 
 				<table border="0" cellpadding="5" cellspacing="0">
 
 					<tr>
-
+						<td><input type="image"
+							src="sistema/images/top_new_btn_.jpg" onclick="location.href='cadastrarMistura.jsp'"/></td>
+					
 						<td><input type="text" value="Pesquisar"
 							onblur="if (this.value=='') { this.value='Pesquisar'; }"
 							onfocus="if (this.value=='Pesquisar') { this.value=''; }"
@@ -120,19 +122,20 @@
 													<th class="table-header-repeat line-left"><a href="">Opções</a></th>
 
 												</tr>
-												<tr>
-													<td>Água</td>
-													<td>H20</td>
-													<td>2 Átomos de um elemento da Família 1A + 1 Elemento da Família 6A
-													
-													</td>
-													<td>A ÁGUA é uma das substâncias mais abundantes em nosso planeta e pode ser encontrada em três estados físicos: sólido, líquido, e gasoso</td>
-													<td class="options-width"><a href="" title="Editar"
-														class="icon-1 info-tooltip"></a> <a href=""
-														title="Excluir" class="icon-2 info-tooltip"></a> <a
-														href="" title="Turmas" class="icon-3 info-tooltip"></a> <a
-														href="" title="Matricular" class="icon-5 info-tooltip"></a>
-													</td>
+												<c:forEach items="${misturas}" var="mistura">
+													<tr>
+														<td><c:out value="${mistura.nome}" /></td>
+														<td><c:out value="${mistura.mistura}" /></td>
+														<td><c:out value="${mistura.dica}" /></td>
+														<td><c:out value="${mistura.informacao}" /></td>
+														<td class="options-width"><a href="" title="Editar"
+															class="icon-1 info-tooltip"></a> <a href=""
+															title="Excluir" class="icon-2 info-tooltip"></a> <a
+															href="" title="Turmas" class="icon-3 info-tooltip"></a> <a
+															href="" title="Matricular" class="icon-5 info-tooltip"></a>
+														</td>														
+													</tr>
+												</c:forEach>
 											</table>
 											<!--  end product-table................................... -->
 										</form>

@@ -10,7 +10,7 @@
 </head>
 <body>	
 <img src="login/images/background.png" width="100%" height="100%" id="bg">    	
-     
+ 
 	<div align="center" >
 	<a href="http://code.google.com/p/myquimica/"><img src="login/images/tituloMyquimica.png" width="471" height="90" style="mmargin-left: 0px;" /></a>
 	</div>

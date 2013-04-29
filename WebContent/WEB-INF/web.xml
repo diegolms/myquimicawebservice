@@ -15,7 +15,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey REST Service</servlet-name>
-		<url-pattern>/service/*</url-pattern>
+		<url-pattern>/service/*</url-pattern>		
 	</servlet-mapping>
 	<servlet>
 		<description></description>
@@ -35,4 +35,24 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<servlet>
+		<description></description>
+		<display-name>AlunoServlet</display-name>
+		<servlet-name>AlunoServlet</servlet-name>
+		<servlet-class>br.com.myquimica.servlets.AlunoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AlunoServlet</servlet-name>
+		<url-pattern>/AlunoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>MisturaServlet</display-name>
+		<servlet-name>MisturaServlet</servlet-name>
+		<servlet-class>br.com.myquimica.servlets.MisturaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MisturaServlet</servlet-name>
+		<url-pattern>/MisturaServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

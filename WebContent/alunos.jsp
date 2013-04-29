@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 
-<%@ page language="java" import="java.sql.*"%>
-<%@ page language="java" import="br.com.myquimica.database.ConexaoBD"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -23,9 +21,7 @@
 <body>
 	<!-- h1>
 		Bem vindo
-		<%
-		out.print(session.getAttribute("login"));
-	%>!
+		<%out.print(session.getAttribute("login"));%>!
 
 	</h1-->
 
@@ -41,7 +37,7 @@
 
 	<!-- start content-outer -->
 	<div id="content-outer">
-			
+
 		<!-- start content -->
 		<div id="content">
 			<div id="page-heading">
@@ -111,24 +107,25 @@
 													<th class="table-header-repeat line-left minwidth-1"><a
 														href="">Nome</a></th>
 
-													<th class="table-header-repeat line-left"><a href="">Matrícula</a></th>
-
+													
 													<th class="table-header-repeat line-left"><a href="">E-mail</a></th>
 
 													<th class="table-header-repeat line-left"><a href="">Opções</a></th>
 
 												</tr>
-												<tr>
-													<td>1</td>
-													<td>Diego Lopes Marques</td>
-													<td>80821064</td>
-													<td>diego.lopes@dce.ufpb.br</td>
-													<td class="options-width"><a href="" title="Editar"
-														class="icon-1 info-tooltip"></a> <a href=""
-														title="Excluir" class="icon-2 info-tooltip"></a> <a
-														href="" title="Turmas" class="icon-3 info-tooltip"></a> <a
-														href="" title="Matricular" class="icon-5 info-tooltip"></a>
-													</td>
+												<c:forEach items="${alunos}" var="aluno">
+													<tr>
+														<td><c:out value="${aluno.id}" /></td>
+														<td><c:out value="${aluno.nome}" /></td>
+														<td><c:out value="${aluno.email}" /></td>
+														<td class="options-width"><a href="" title="Editar"
+															class="icon-1 info-tooltip"></a> <a href=""
+															title="Excluir" class="icon-2 info-tooltip"></a> <a
+															href="" title="Turmas" class="icon-3 info-tooltip"></a> <a
+															href="" title="Matricular" class="icon-5 info-tooltip"></a>
+														</td>														
+													</tr>
+												</c:forEach>
 											</table>
 											<!--  end product-table................................... -->
 										</form>

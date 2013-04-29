@@ -1,6 +1,8 @@
 package br.com.myquimica.resources;
 
 import java.util.ArrayList;
+import java.util.List;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -10,25 +12,26 @@ import javax.ws.rs.Produces;
 
 import com.google.gson.Gson;
 
+import br.com.myquimica.dao.MisturaDAO;
 import br.com.myquimica.database.Banco;
 import br.com.myquimica.exception.NoContentException;
 import br.com.myquimica.model.Mistura;
 
 @Path("/mistura")
 public class MisturaResource {
-   
-    @GET
-    @Path("/buscarTodas")
-    @Produces("application/json")
-    public ArrayList<Mistura> selTodos(){
-     return Banco.getBancoInstance().getListaMisturas();
-    }
+//   
+//    @GET
+//    @Path("/buscarTodas")
+//    @Produces("application/json")
+//    public List<Mistura> selTodos(){
+//     return MisturaDAO.getInstance().getAllMisturas();
+//    }
 
     @GET
-    @Path("/buscarTodasGSON")
+    @Path("/buscarMisturas")
     @Produces("application/json")
     public String selTodosGSON(){
-     return new Gson().toJson(Banco.getBancoInstance().getListaMisturas());
+     return new Gson().toJson(MisturaDAO.getInstance().getAllMisturas());
     }
    
     @GET

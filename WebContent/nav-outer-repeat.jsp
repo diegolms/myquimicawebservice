@@ -41,13 +41,14 @@
 					</ul><div class="nav-divider"></div>
 
 					<ul class="select">
-					<a href="alunos.jsp"><b>Alunos</b> </a> 		
+					<!-- jsp:forward page="/AlunoServlet?action=listarAlunos"/><b>Alunos</b-->
+					<a href="AlunoServlet?action=listarAlunos"><b>Alunos</b> </a> 		
 					</ul>
 
 					<div class="nav-divider"></div>
 
 					<ul class="select">
-						<a href="misturas.jsp"><b>Misturas</b></a> 
+						<a href="MisturaServlet?action=listarMisturas"><b>Misturas</b></a> 
 							
 					</ul>
 					<div class="nav-divider"></div>

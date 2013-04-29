@@ -14,7 +14,7 @@ public class Banco {
 		listaMisturas = new ArrayList<Mistura>();
 		Mistura mistura = new Mistura();
 		mistura.setNome("Água");
-		mistura.setFormula("HHO");
+		mistura.setMistura("HHO");
 		inserir(mistura);
 	}
 

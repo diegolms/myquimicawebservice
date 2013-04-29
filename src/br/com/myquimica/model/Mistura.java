@@ -7,8 +7,34 @@ public class Mistura {
 	
 	private int id;
 	private String nome;
-	private String formula;
+	private String mistura;	
+	private String dica;
+	private String informacao;
 	
+	public Mistura(){
+		
+	}
+	
+	
+	public Mistura(int id, String nome, String mistura, String dica,
+			String informacao) {
+		this.id = id;
+		this.nome = nome;
+		this.mistura = mistura;
+		this.dica = dica;
+		this.informacao = informacao;
+	}
+	
+	
+	public Mistura(String nome, String mistura, String dica, String informacao) {
+		super();
+		this.nome = nome;
+		this.mistura = mistura;
+		this.dica = dica;
+		this.informacao = informacao;
+	}
+
+
 	public int getId() {
 		return id;
 	}
@@ -21,11 +47,25 @@ public class Mistura {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getFormula() {
-		return formula;
+	public String getMistura() {
+		return mistura;
 	}
-	public void setFormula(String formula) {
-		this.formula = formula;
+	public void setMistura(String mistura) {
+		this.mistura = mistura;
 	}
+	public String getDica() {
+		return dica;
+	}
+	public void setDica(String dica) {
+		this.dica = dica;
+	}
+	public String getInformacao() {
+		return informacao;
+	}
+	public void setInformacao(String informacao) {
+		this.informacao = informacao;
+	}
+	
+	
 	
 }
