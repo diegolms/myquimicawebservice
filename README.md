@@ -1,6 +1,5 @@
-Interface Web do MyQuimica para professores.
-
--Inserir novos desafios
--Gerenciar alunos
--Gerar relatórios
+Interface Web do MyQuimica para professores.<br><br>
+-Inserir novos desafios<br>
+-Gerenciar alunos<br>
+-Gerar relatÃ³rios
 
