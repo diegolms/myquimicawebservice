@@ -15,7 +15,6 @@ import br.com.myquimica.database.Banco;
 import br.com.myquimica.exception.NoContentException;
 import br.com.myquimica.model.Mistura;
 
-import com.google.gson.Gson;
 
 @Path("/mistura")
 public class MisturaResource {
@@ -27,13 +26,7 @@ public class MisturaResource {
      return MisturaDAO.getInstance().getAllMisturas();
     }
 
-    @GET
-    @Path("/buscarTodas")
-    @Produces(MediaType.APPLICATION_JSON)
-    public String selTodosGSON(){
-     return new Gson().toJson(MisturaDAO.getInstance().getAllMisturas());
-    }
-   
+    
     @GET
     @Path("/{id}")
     @Produces("application/json")
