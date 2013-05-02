@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>MyQuímica</title>
+<title>MyQuï¿½mica</title>
 <link type="text/css" rel="stylesheet" href="login/login-box.css" />
 
 </head>
-<body>	
-<img src="login/images/background.png" width="100%" height="100%" id="bg">    	
+<body style="background: url('login/images/background.png') no-repeat">	
+<!-- <img src="login/images/background.png" width="100%" height="100%" id="bg">    	 -->
  
 	<div align="center" >
 	<a href="http://code.google.com/p/myquimica/"><img src="login/images/tituloMyquimica.png" width="471" height="90" style="mmargin-left: 0px;" /></a>
@@ -20,7 +20,7 @@
 
 			
 			<form action="LoginServlet" method="post">
-				<div id="login-box-name" style="margin-top: 5px;">Usuário:</div>
+				<div id="login-box-name" style="margin-top: 5px;">Usuï¿½rio:</div>
 				<div id="login-box-field" style="margin-top: 5px;">
 					<input name="login" class="form-login" title="Username" value=""
 						size="30" maxlength="2048" />
@@ -35,7 +35,7 @@
 				<%
 				if (request.getParameter("erro") != null) {
 				%>
-					<b><font color="red"> Usuário ou Senha Inválidos </font></b>					
+					<b><font color="red"> Usuï¿½rio ou Senha Invï¿½lidos </font></b>					
 				<%
 				}
 				%> 
